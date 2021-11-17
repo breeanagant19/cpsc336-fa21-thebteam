@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Home</title>
+  <title>Insert/Update</title>
   <link href="style.css" rel="stylesheet">
 </head>
 
@@ -20,14 +20,15 @@
 
 
   <div id="main">
-  <h1>The B-Team Final Project Home Page</h1>
+  <h1>Insert An Item!</h1>
   <h2><i>Work in progress</i></h2>
 
-  <p><a href="insert.html">Insert</a></p>
-  <p><a href="delete.html">Delete</a></p>
-  <p><a href="select.php">Display</a></p>
-  <p><a href="about.html">About</a></p>
-  </div>
-
+<form action="insert.php">
+	12-Digit Identifier: <input type = "code" name="ID"><br>
+	Item Name: <input type = "name" name="Name"><br>
+	Quantity: <input type = "num" name = "Quantity"><br>
+	<input type = "submit" value = "Go">
+</form>
+</div>
 </body>
 </html>
