@@ -21,6 +21,17 @@
 	</style>
 </head>
 <body>
+  <div id="header">
+    <nav>
+    <a href="index.html">Home</a> |
+    <a href="insert.html">Insert</a> |
+    <a href="delete.html">Delete</a> |
+    <a href="select.php">Display</a> |
+    <a href="about.html">About</a>
+    </nav>
+
+  </div>
+
 <div id="main">
 <h1>Item Records in the Database</h1><br>
 <h2><i>Work in progress</i></h2>

@@ -4,6 +4,17 @@
         <link href="style.css" rel="stylesheet">
 </head>
 <body>
+  <div id="header">
+    <nav>
+    <a href="index.html">Home</a> |
+    <a href="insert.html">Insert</a> |
+    <a href="delete.html">Delete</a> |
+    <a href="select.php">Display</a> |
+    <a href="about.html">About</a>
+    </nav>
+
+  </div>
+
 <div id="main">
 <br>
 <?php
@@ -18,7 +29,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if($conn->connect_error){
         die("connection failed: ". $conn->connect_error);
 }
-echo "Successful Retrieval Effort<br>";
+echo "<h1>Record Deletion</h1><br>";
 $sql = "SELECT *  FROM items WHERE code='".$_GET["ID"]."'";
 $sql2 = "DELETE FROM items WHERE code='".$_GET["ID"]."'";
 
