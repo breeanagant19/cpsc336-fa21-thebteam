@@ -4,6 +4,19 @@
 <head>
   <title>Delete</title>
   <link href="style.css" rel="stylesheet">
+
+  <style>
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #baa486;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 12px 20px;;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+
 </head>
 
 <body>
@@ -25,8 +38,8 @@
   <h2><i>Work in progress</i></h2>
 
 <form action="delete.php">
-        12-Digit Identifier: <input type = "code" name="ID"><br>
-        <input type = "submit" value = "Go">
+        12-Digit Identifier: <input type = "number" name="ID" required><br>
+        <input type = "submit">
 </form>
 </div>
 </body>

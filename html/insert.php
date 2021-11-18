@@ -24,6 +24,9 @@ $username   = "dev";
 $password   = "password";
 $dbname     = "devDB";
 
+if(strlen($_GET["ID"]) != 12 || strlen($_GET["Name"]) == 0 || strlen($_GET["Name"]) > 32 || strlen($_GET["Quantity"]) == 0){ echo "<h2>Bad Input</h2>";}
+else{ 
+
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if($conn->connect_error){
@@ -51,7 +54,7 @@ else{
         }
 
 }
-
+}
 ?>
 <br>
 <form action="insert.html">

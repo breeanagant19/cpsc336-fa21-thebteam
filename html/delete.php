@@ -24,6 +24,8 @@ $username   = "dev";
 $password   = "password";
 $dbname     = "devDB";
 
+if(strlen($_GET["ID"]) != 12){echo "<h2>Bad Input</h2>";}
+else{
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if($conn->connect_error){
@@ -43,9 +45,9 @@ if($result->num_rows > 0){
 	}
 }
 else{
-	echo "<h1>No record matches ID: ".$_GET["ID"]."</h1><br>";
+	echo "<h2>No record matches ID: ".$_GET["ID"]."</h2><br>";
 }
-
+}
 ?>
 <form action="delete.html">
     <input type="submit" value="Back to Delete" />
