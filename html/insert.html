@@ -4,6 +4,17 @@
 <head>
   <title>Insert/Update</title>
   <link href="style.css" rel="stylesheet">
+  <style> 
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #baa486;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 12px 20px;;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
 </head>
 
 <body>
@@ -24,9 +35,10 @@
   <h2><i>Work in progress</i></h2>
 
 <form action="insert.php">
-	12-Digit Identifier: <input type = "code" name="ID"><br>
-	Item Name: <input type = "name" name="Name"><br>
-	Quantity: <input type = "num" name = "Quantity"><br>
+	<!--This "&nbsp;" method for aligning things sucks, but i'm too lazy to do the CSS right now -Sam -->
+	12-Digit Identifier: <input type = "number" name="ID" required><br>
+	Item Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type = "text" name="Name" required><br>
+	Quantity:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type = "number" name = "Quantity" required><br>
 	<input type = "submit" value = "Go">
 </form>
 </div>
