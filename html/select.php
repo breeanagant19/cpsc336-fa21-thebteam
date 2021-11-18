@@ -44,16 +44,7 @@
 	</tr>
 <?php
 //Final Project Select.php Template - The B-Team
-$servername = "192.168.0.2";
-$username   = "dev";
-$password   = "password";
-$dbname     = "devDB";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-if($conn->connect_error){
-        die("connection failed: ". $conn->connect_error);
-}
-//echo "<h3>Connection was successful</h3> <br>";
+include 'connect.php';
 $sql = "SELECT code,name,quantity FROM items";
 $result = $conn->query($sql);
 if($result->num_rows > 0){

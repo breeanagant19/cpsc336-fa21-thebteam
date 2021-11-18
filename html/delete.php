@@ -19,19 +19,9 @@
 <br>
 <?php
 //Final Project - B-Team Delete PHP
-$servername = "192.168.0.2";
-$username   = "dev";
-$password   = "password";
-$dbname     = "devDB";
-
 if(strlen($_GET["ID"]) != 12){echo "<h2>Bad Input</h2>";}
 else{
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-if($conn->connect_error){
-        die("connection failed: ". $conn->connect_error);
-}
-echo "<h1>Record Deletion</h1><br>";
+include 'connect.php';
 $sql = "SELECT *  FROM items WHERE code='".$_GET["ID"]."'";
 $sql2 = "DELETE FROM items WHERE code='".$_GET["ID"]."'";
 

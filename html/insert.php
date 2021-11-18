@@ -19,19 +19,10 @@
 <br>
 <?php
 //Final Project - B-Team Insert PHP
-$servername = "192.168.0.2";
-$username   = "dev";
-$password   = "password";
-$dbname     = "devDB";
 
 if(strlen($_GET["ID"]) != 12 || strlen($_GET["Name"]) == 0 || strlen($_GET["Name"]) > 32 || strlen($_GET["Quantity"]) == 0){ echo "<h2>Bad Input</h2>";}
 else{ 
-
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-if($conn->connect_error){
-        die("connection failed: ". $conn->connect_error);
-}
+include 'connect.php';
 echo "<h1>Record Insertion/Update</h1><br>";
 $sql = "SELECT *  FROM items WHERE code='".$_GET["ID"]."'";
 $sql2 = "INSERT INTO items (code, name, quantity) VALUES ('".$_GET["ID"]."', '".$_GET["Name"]."', '".$_GET["Quantity"]."')";
