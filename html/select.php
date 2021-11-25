@@ -34,7 +34,6 @@
 
 <div id="main">
 <h1>Item Records in the Database</h1><br>
-<h2><i>Work in progress</i></h2>
 <br>
 <table>
 	<tr>
