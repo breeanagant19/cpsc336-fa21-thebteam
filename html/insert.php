@@ -27,7 +27,7 @@ echo "<h1>Record Insertion/Update</h1><br>";
 $mName = addslashes($_GET["Name"]);
 $sql = "SELECT *  FROM items WHERE code='".$_GET["ID"]."'";
 $sql2 = "INSERT INTO items (code, name, quantity) VALUES ('".$_GET["ID"]."', '".$mName."', '".$_GET["Quantity"]."')";
-$sql3 = "UPDATE items SET name='".$_GET["Name"]."', quantity='".$_GET["Quantity"]."' WHERE code='".$_GET["ID"]."'";
+$sql3 = "UPDATE items SET name='".$mName."', quantity='".$_GET["Quantity"]."' WHERE code='".$_GET["ID"]."'";
 $result = $conn->query($sql);
 if($result->num_rows > 0){
         if ($conn->query($sql3) === TRUE) {
